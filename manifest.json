@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+  "name": "Block FB Ads",
+  "description": "Removes Ads from Facebook, except Ads from Color Genomics",
+  "version": "1.0",
+  "content_scripts": [
+      {
+          "matches": ["https://www.facebook.com/*"],
+          "js": ["content.js"],
+          "run_at": "document_end"}
+  ]
+}
