@@ -1,6 +1,6 @@
 //Hide sidebar ads
 elem = document.getElementsByClassName('pagelet-group pagelet');
-elem.pagelet_ego_pane.style.visibility = "hidden";
+//elem.pagelet_ego_pane.style.visibility = "hidden";
 elems = document.getElementsByClassName('uiStreamSponsoredLink');
 
 //Hide Ads in newsfeed
@@ -19,7 +19,16 @@ function clearads() {
              p9.style.visibility = "hidden";
         }
     }
+    elems = document.getElementsByClassName('ego_section')
+    for (a=0; a < elems.length; a++) {
+        elems[a].style.visibility = "hidden";
+        elems[a].hidden = true
+    }
+
 }
 clearads()
 document.onload = clearads;
 document.onscroll = clearads;
+window.setInterval(function(){
+      clearads();
+}, 500);

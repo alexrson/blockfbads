@@ -5,8 +5,16 @@
   "version": "1.0",
   "content_scripts": [
       {
+          "matches": ["http://www.forbes.com/*"],
+          "js": ["forbescontent.js"],
+          "run_at": "document_end"},
+      {
           "matches": ["https://www.facebook.com/*"],
           "js": ["content.js"],
+          "run_at": "document_end"},
+      {
+          "matches": ["https://www.wired.com/*"],
+          "js": ["wcontent.js"],
           "run_at": "document_end"}
   ]
 }
